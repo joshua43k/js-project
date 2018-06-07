@@ -37,3 +37,13 @@ do {
   }
   z++
 } while(z < todoArr.length);
+
+let doneTodo = [];
+
+todoArr.forEach(todo => {
+  if (todo[todo.length - 1] === 'done') {
+    doneTodo.push(todo);
+  }
+})
+
+alert(doneTodo);
