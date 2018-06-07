@@ -71,13 +71,19 @@
     // alert(newNum)
 
     //try 2
-    function lifeSuppy(age, use) {
-      let newAge = age / 80;
-      let newUse = use / 365;
-      let newLast = use * 80;
-      return newAge, newLast;
-    }
+    function lifetimeCalculator(age, dailyUse) {
+      if(!isNaN(age) && !isNaN(dailyUse)) {
+        const death = 80;
+        return (death - age) * (dailyUse * 365);
+      } else {
+        userAge = prompt('how old are you?', '30');
+        userUse = prompt("How much do you use every day?");
+        lifetimeCalculator(parseInt(userAge), parseInt(userUse));
+      }
+    };
 
-let newStuff = lifeSuppy(18,4);
+    let userAge = prompt('how old are you?', '30');
+    let userUse = prompt("How much do you use every day?", '1');
+    let usage = lifetimeCalculator(parseInt(userAge), parseInt(userUse));
 
-alert(newStuff);
+    alert(`You will need ${usage} to last until you're 80.`);
