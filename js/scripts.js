@@ -41,9 +41,7 @@ do {
 let doneTodo = [];
 
 todoArr.forEach(todo => {
-  if (todo[todo.length - 1] === 'done') {
-    doneTodo.push(todo);
-  }
+  if (todo[todo.length - 1] === 'done') doneTodo.push(todo);
 })
 
 alert(doneTodo);
